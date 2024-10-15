@@ -1,0 +1,139 @@
+/* Definición de variables en :root */
+:root {
+    --background-general: #c9cbcb; /* Fondo general */
+    --background-section: #FFFFFF; /* Fondo de secciones y encabezado */
+    --text-color: #000000; /* Color del texto */
+    --accent-color: #6EA41C; /* Color de acentos (botones, subtítulos, etc.) */
+    --border-color: #F7F7F7; /* Color de borde */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Color de sombra */
+
+    /* Fuentes */
+    --font-family-general: "Poppins", sans-serif;
+    --font-weight-light: 400;
+    /*--font-weight-bold: bold;*/
+
+    /* Tamaños de fuente */
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-p: 1rem;
+
+    /* Espaciado */
+    --padding-general: 20px;
+    --margin-general: 0;
+}
+
+/* General body styling */
+body {
+    font-family: var(--font-family-general);
+    font-weight: var(--font-weight-light);
+    font-style: normal;
+    margin: var(--margin-general);
+    padding: var(--margin-general);
+    background-color: var(--background-general);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: var(--background-section);
+    color: var(--text-color);
+    padding: var(--padding-general);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: var(--margin-general);
+    font-size: var(--font-size-h1);
+}
+
+/* Main content styling */
+main {
+    padding: var(--padding-general);
+    max-width: 800px;
+    margin: auto;
+    background-color: var(--background-section);
+}
+
+h2 {
+    color: var(--accent-color);
+    font-size: var(--font-size-h2);
+}
+
+p,
+ul {
+    font-size: var(--font-size-p);
+    margin-bottom: var(--padding-general);
+    color: var(--text-color);
+}
+
+/* Color box for color scheme section */
+.color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.green {
+    background-color: var(--accent-color);
+}
+
+.gray {
+    background-color: var(--background-general);
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--background-section);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: var(--padding-general);
+}
+
+/* Estilos para la sección de wireframes */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: var(--padding-general) 0;
+}
+
+.wireframe {
+    flex: 1 1 45%;
+    margin: 10px;
+    text-align: center;
+}
+
+.wireframe h3 {
+    font-family: var(--font-family-general);
+    font-weight: var(--font-weight-bold);
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    box-shadow: 0px 4px 6px var(--shadow-color);
+    border-radius: 8px;
+}
+
+/* Estilo para los hr */
+hr {
+    height: 3px;
+    margin: 15px 0;
+    background-color: var(--accent-color);
+    border: none;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .wireframe {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
